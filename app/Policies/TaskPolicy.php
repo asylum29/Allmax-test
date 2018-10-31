@@ -14,11 +14,11 @@ class TaskPolicy
 
     public function delete(User $user, Task $task)
     {
-        return $user->id === $task->user_id || $user->is_admin;
+        return $user->id == $task->user_id || $user->is_admin;
     }
 
     public function update(User $user, Task $task)
     {
-        return $user->id === $task->user_id || $user->is_admin;
+        return $user->id == $task->user_id || $user->is_admin;
     }
 }
